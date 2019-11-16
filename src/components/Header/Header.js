@@ -6,19 +6,19 @@ class Header extends Component {
     return (
       <div className="header d-flex">
         <h3>
-          <a href="#">
+          <a href="/">
             Star DB
           </a>
         </h3>
         <ul className="d-flex">
           <li>
-            <a href="#">People</a>
+            <a href="/">People</a>
           </li>
           <li>
-            <a href="#">Planets</a>
+            <a href="/">Planets</a>
           </li>
           <li>
-            <a href="#">Starship</a>
+            <a href="/">Starship</a>
           </li>
         </ul>
       </div>

@@ -1,0 +1,10 @@
+.error-indicator{
+    text-align: center;
+}
+.error-indicator__icon{
+    width: 100px;
+    margin-bottom: 30px;
+}
+.boom{
+    font-size: 30px;
+}

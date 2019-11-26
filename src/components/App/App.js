@@ -12,8 +12,8 @@ import {
   LoginPage,
   SecretPage,
 } from "../pages";
-import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
-import { StarshipDetails} from "../sw-components";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { StarshipDetails } from "../sw-components";
 
 export default class App extends Component {
 

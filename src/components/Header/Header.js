@@ -19,6 +19,12 @@ class Header extends Component {
           <li>
             <Link to="/starships/">Starship</Link>
           </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/secret">Secret</Link>
+          </li>
         </ul>
       </div>
     );

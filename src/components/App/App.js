@@ -5,7 +5,9 @@ import SwapiService from "../../services/swapi-sevices";
 import {SwapiSeviceProvider} from "../swapi-service-context";
 import RandomPlanet from "../RandomPlanet";
 import ErrorButton from "../ErrorButton";
-import { PeoplePage, PlanetsPage, StarshipPage } from "../pages";
+import {PeoplePage, PlanetsPage, StarshipPage} from "../pages";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import { StarshipDetails} from "../sw-components";
 
 export default class App extends Component {
 
@@ -25,18 +27,29 @@ export default class App extends Component {
     return (
       <div className="container">
         <SwapiSeviceProvider value={this.state.swapiService}>
+          <Router>
 
-          <Header/>
+            <Header/>
 
-          <RandomPlanet updateInterval={100000}/>
+            <div>
+              <RandomPlanet updateInterval={100000}/>
 
-          <ErrorButton/>
+              <ErrorButton/>
+            </div>
 
-          <PeoplePage/>
-          <PlanetsPage/>
-          <StarshipPage/>
+            <Route path="/"
+                   render={() => <h2>Welcome to StarDB</h2>}
+                   exact></Route>
+            <Route path="/people" component={PeoplePage}></Route>
+            <Route path="/planets" component={PlanetsPage}></Route>
+            <Route path="/starships" exact component={StarshipPage}></Route>
+            <Route path="/starships/:id"
+                   render={({match, location, history}) => {
+                     const {id} = match.params
+                     return <StarshipDetails itemId={id}/>
+                   }}></Route>
 
-
+          </Router>
         </SwapiSeviceProvider>
       </div>
     );

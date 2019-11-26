@@ -28,7 +28,7 @@ export default class App extends Component {
 
           <Header/>
 
-          <RandomPlanet/>
+          <RandomPlanet updateInterval={10000}/>
 
           <ErrorButton/>
 

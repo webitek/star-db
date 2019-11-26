@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
 import Header from '../Header'
-import RandomPlanet from '../RandomPlanet'
-import ErrorButton from "../ErrorButton";
 import ErrorIndicator from "../ErrorIndicator";
-import PeoplePage from "../people-page";
 import SwapiService from "../../services/swapi-sevices";
+import {
+  StarshipDetails,
+  PlanetDetails,
+  PersonDetails,
+  PersonList,
+  PlanetList,
+  StarshipList,
+} from "../sw-components";
+import RandomPlanet from "../RandomPlanet";
+import ErrorButton from "../ErrorButton";
 
 export default class App extends Component {
 
@@ -25,11 +32,22 @@ export default class App extends Component {
     return (
       <div className="container">
         <Header />
+
         <RandomPlanet />
 
         <ErrorButton />
 
-        <PeoplePage />
+        <PersonDetails itemId={11} />
+        <PlanetDetails itemId={5} />
+        <StarshipDetails itemId={5} />
+
+        <PersonList />
+
+        <PlanetList />
+
+        <StarshipList />
+
+        {/*<PeoplePage />*/}
 
         {/*<div className="row mb2">
           <div className="col-md-6">

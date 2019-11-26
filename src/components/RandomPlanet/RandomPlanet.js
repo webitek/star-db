@@ -12,19 +12,8 @@ export default class RandomPlanet extends Component {
     planet: {},
     loading: true,
     error: false,
-    // id: null,
-    // name: null,
-    // population: null,
-    // rotationPeriod: null,
-    // diameter: null,
   }
 
-  /*constructor() {
-    super()
-    this.updatePlanet()
-    this.interval = setInterval(this.updatePlanet, 2500)
-    // clearInterval(this.interval)
-  }*/
   componentDidMount() {
     this.updatePlanet()
     this.interval = setInterval(this.updatePlanet, 4000)

@@ -26,7 +26,8 @@ export default class ItemDetails extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.itemId !== prevProps.itemId) {
+    const {itemId} = this.props
+    if (itemId && itemId !== prevProps.itemId) {
       this.setState({loading: true})
       this.updateItem()
     }
@@ -73,18 +74,6 @@ export default class ItemDetails extends Component {
                 return React.cloneElement(child, {item})
               })
             }
-            {/*<li className="list-group-item">
-              <span className="term">Gender</span>
-              <span>{gender}</span>
-            </li>
-            <li className="list-group-item">
-              <span className="term">Birth Year</span>
-              <span>{birthYear}</span>
-            </li>
-            <li className="list-group-item">
-              <span className="term">Eye Color</span>
-              <span>{eyeColor}</span>
-            </li>*/}
           </ul>
           <ErrorButton/>
         </div>

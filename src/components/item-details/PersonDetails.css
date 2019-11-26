@@ -1,5 +1,6 @@
 img {
     object-fit: contain;
+    height: 300px;
 }
 .list-group-item span.term{
     padding-right: 10px;
